@@ -1,14 +1,14 @@
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
 
 import Header from './components/headerComp/headerComp'
 import HomePage from './pages/homePage/homePage'
 import SetTimePage from './pages/setTimePage/setTimePage'
 import AnalogTimerPage from './pages/analogTimerPage/analogTimerPage'
-import DigitalTimerPage from './pages/analogTimerPage/digitalTimerPage'
-import TimeStopPage from './pages/analogTimerPage/timeStopPage'
+import DigitalTimerPage from './pages/digitalTimerPage/digitalTimerPage'
+import TimeStopPage from './pages/timeStopPage/timeStopPage'
 
 function App() {
-
   return (
     <div className="app">
       <Header />

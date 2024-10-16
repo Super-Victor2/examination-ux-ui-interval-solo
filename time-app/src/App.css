@@ -1,6 +1,37 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --primary-background-color: rgb(68, 68, 68);
+  --secondary-background-color: rgb(0, 0, 0);
+  --primary-font-color: rgba(0, 0, 0, 1);
+  --shadow-font-color: rgba(255, 255, 255, 0.705);
+  --primary-color: rgba(239, 67, 67, 1);
+  --secondary-color: rgba(255, 255, 255, 1);
+  --button-color: rgba(239, 67, 67, 1);
+  --title-font-size: 32px;
+
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+}
+
+.app {
+  min-width: 411px;
+  max-width: 411px;
+  min-height: 879px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-background-color);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
