@@ -4,7 +4,6 @@ import useTimer from 'easytimer-react-hook';
 import { useState, useEffect } from 'react';
 
 function SetTimeComp() {
-    // State for minutes
     const [minutes, setMinutes] = useState(0);
     const [timer] = useTimer({
         countdown: true,
@@ -27,14 +26,13 @@ function SetTimeComp() {
             });
 
             console.log(`Timer started with ${minutes} minutes`);
-            console.log('Current timer values:', timer.getTimeValues());
 
             timer.addEventListener('secondsUpdated', () => {
-                console.log('Time remaining:', timer.getTimeValues().toString());
+                console.log('Time remaining:', timer.getTimeValues().minutes);
             });
 
             timer.addEventListener('targetAchieved', () => {
-                console.log('Countdown finished');
+                console.log(`Countdown finished from ${minutes} minutes`);
             });
         }
     };
@@ -52,9 +50,9 @@ function SetTimeComp() {
                 </aside>
             </section>
             <section className="start-time-section">
-            <Link to='/AnalogTimerPage'>
+                <Link to='/TimerPage'>
                     <button className="start-timer" onClick={startTimer}>Start timer</button>
-            </Link>
+                </Link>
             </section>
         </>
     );
