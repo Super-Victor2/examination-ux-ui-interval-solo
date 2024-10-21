@@ -1,3 +1,10 @@
+.digital-timer-wrapper {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+}
+
 .digital-timer-text {
     font-size: 58px;
     color: white;

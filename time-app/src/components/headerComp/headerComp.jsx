@@ -1,8 +1,9 @@
 import './headerComp.css';
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
-function HeaderComp() {
+function HeaderComp({ handleDisplayAnalog, handleDisplayDigital }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const menuVariants = {
@@ -44,9 +45,9 @@ function HeaderComp() {
                         variants={menuVariants}
                         style={{ backgroundColor: 'black' }}
                 >
-                    <motion.li className="menu-item">Home</motion.li>
-                    <motion.li className="menu-item">Analog</motion.li>
-                    <motion.li className="menu-item">Digital</motion.li>
+                    <Link to="./"><motion.li className="menu-item">Home</motion.li></Link>
+                    <motion.li className="menu-item" onClick={handleDisplayAnalog}>Analog</motion.li>
+                    <motion.li className="menu-item" onClick={handleDisplayDigital}>Digital</motion.li>
                 </motion.ul>
             </motion.div>
         </>

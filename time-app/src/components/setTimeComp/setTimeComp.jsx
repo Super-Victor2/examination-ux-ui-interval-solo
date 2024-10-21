@@ -1,39 +1,18 @@
 import './setTimeComp.css';
 import { Link } from 'react-router-dom';
-import useTimer from 'easytimer-react-hook';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+
 
 function SetTimeComp() {
     const [minutes, setMinutes] = useState(0);
-    const [timer] = useTimer({
-        countdown: true,
-        target: { minutes: 0 },
-    });
 
-    const incrementMinutes = () => {
-        setMinutes((prevMinutes) => prevMinutes + 1);
+    const increaseMinutes = () => {
+        setMinutes(prevMinutes => prevMinutes + 1);
     };
 
-    const decrementMinutes = () => {
-        setMinutes((prevMinutes) => (prevMinutes > 0 ? prevMinutes - 1 : 0));
-    };
-
-    const startTimer = () => {
+    const decreaseMinutes = () => {
         if (minutes > 0) {
-            timer.start({
-                countdown: true,
-                startValues: { minutes: minutes },
-            });
-
-            console.log(`Timer started with ${minutes} minutes`);
-
-            timer.addEventListener('secondsUpdated', () => {
-                console.log('Time remaining:', timer.getTimeValues().minutes);
-            });
-
-            timer.addEventListener('targetAchieved', () => {
-                console.log(`Countdown finished from ${minutes} minutes`);
-            });
+            setMinutes(prevMinutes => prevMinutes - 1);
         }
     };
 
@@ -41,17 +20,17 @@ function SetTimeComp() {
         <>
             <section className="set-time-container">
                 <section className="time-wrapper">
-                    <i className="icon fa-solid fa-chevron-left" onClick={decrementMinutes}></i>
+                    <i className="icon fa-solid fa-chevron-left" onClick={decreaseMinutes}></i>
                     <h1 className="time-set">{minutes}</h1>
-                    <i className="icon fa-solid fa-chevron-right" onClick={incrementMinutes}></i>
+                    <i className="icon fa-solid fa-chevron-right" onClick={increaseMinutes}></i>
                 </section>
                 <aside className="minutes-text-wrapper">
                     <p className="minutes-text">minutes</p>
                 </aside>
             </section>
             <section className="start-time-section">
-                <Link to='/TimerPage'>
-                    <button className="start-timer" onClick={startTimer}>Start timer</button>
+                <Link to='/TimerPage' state={{ time: minutes }}>
+                    <button className="start-timer">Start timer</button>
                 </Link>
             </section>
         </>
