@@ -1,0 +1,38 @@
+.nav-icon {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    z-index: 9999;
+}
+
+.menu {
+    min-width: 411px;
+    max-width: 411px;
+    min-height: 879px;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: black;
+    opacity: 80%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.menu-item {
+    color: white;
+    margin: 0;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    opacity: 80%;
+    transform: scale(0.98);
+}

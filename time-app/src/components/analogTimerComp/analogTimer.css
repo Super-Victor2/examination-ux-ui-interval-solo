@@ -1,0 +1,26 @@
+.title {
+    position: absolute;
+    top: 2.5%;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.abort-timer-section {
+    position: absolute;
+    bottom: 10%;
+}
+
+.abort-timer {
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+    outline: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
