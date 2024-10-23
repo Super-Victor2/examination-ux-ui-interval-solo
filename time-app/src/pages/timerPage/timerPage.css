@@ -25,6 +25,11 @@
     transition: 0.5s ease-in-out;
 }
 
+.abort-timer:hover {
+    background-color: white;
+    color: black;
+}
+
 .digital-timer-text {
     font-size: 38px;
     color: white;

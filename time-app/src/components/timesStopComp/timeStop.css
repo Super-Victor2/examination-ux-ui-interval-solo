@@ -31,3 +31,8 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
+
+.set-new-timer:hover {
+    background-color: white;
+    color: black;
+}
