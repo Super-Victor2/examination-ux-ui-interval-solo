@@ -7,7 +7,7 @@ function timeStopComp() {
         <>
             <section className="time-stop-bg-section">
                 <section className="time-stop-wrapper">
-                    <img src={alarmImg} alt="img" />
+                    <img className='clock-alarm' src={alarmImg} alt="img" />
                     <h1 className="clock-time-stop-text">Times up!</h1>
                 </section>
                 <section className="set-new-timer-section">

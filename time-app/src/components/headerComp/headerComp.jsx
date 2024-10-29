@@ -8,13 +8,13 @@ function HeaderComp({ handleDisplayAnalog, handleDisplayDigital }) {
 
     const menuVariants = {
         open: {
-            display: "flex",
+            left: 0,
             transition: {
                 duration: 0.5,
             }
         },
         closed: {
-            display: "none",
+            left: -500,
             transition: {
                 duration: 0.5,
             }
@@ -45,7 +45,7 @@ function HeaderComp({ handleDisplayAnalog, handleDisplayDigital }) {
                         variants={menuVariants}
                         style={{ backgroundColor: 'black' }}
                 >
-                    <Link to="./"><motion.li className="menu-item">Home</motion.li></Link>
+                    <Link to="/"><motion.li className="menu-item">Home</motion.li></Link>
                     <motion.li className="menu-item" onClick={handleDisplayAnalog}>Analog</motion.li>
                     <motion.li className="menu-item" onClick={handleDisplayDigital}>Digital</motion.li>
                 </motion.ul>
